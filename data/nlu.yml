@@ -1,0 +1,91 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - assalamualaikum
+    - adab
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - bye 
+    - see you
+    - see ya
+    - pore janabo
+    - see you later
+    - talk to you later
+    - good bye
+    - good night
+    - bye
+    - have a nice day
+    - bye bye
+
+
+- intent: affirmation
+  examples: |
+    - okay
+    - yes
+    - yeah
+    - sure
+    - absolutely
+    - definitely
+    - of course yes
+    - yupp
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - onek shundor
+    - pochondo hoise
+
+- intent: deny
+  examples: |
+    - no
+    - not
+    - never
+    - I don't think so
+    - dislike
+    - don't like that
+    - no way
+    - not really
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+
+# Product Checking
+- intent: check_product
+  examples: |
+    - apnader kase [Xiaomi powerbank](product) ase?
+    - do you have [Samsung charger](product)?
+    - [Anker earphone](product) available?
+    - [qcy melobuds pro 5](product) ase?
+    - have [Realme phone](product)?
+    - ami [Oppo mobile](product) kinbo
+    - apnader kase [Apple iPhone](product) ase?
+    - do you have [OnePlus Nord](product)?
+    - [Sony headphones](product) available?
+    - [JBL speaker](product) ase?
+    - have [Motorola Moto G](product)?
+    - ami [Nokia Lumia](product) kinbo 
+
+
+- intent: interested_in_order
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?

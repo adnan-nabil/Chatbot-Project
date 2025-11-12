@@ -1,0 +1,69 @@
+version: "3.1"
+
+entities:
+  - product
+
+intents:
+  - greet
+  - goodbye
+  - affirmation
+  - deny
+  - check_product
+  - bot_challenge
+
+actions:
+  - action_check_product
+  - action_check_price
+  - action_place_order
+  - action_fetch_offers
+  - action_order_product
+  # add additional custom actions as your business needs grow
+
+
+slots:
+  product:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: product
+
+
+
+responses:
+  utter_greet:
+    - text: "Walaikumussalam! I am Lira, your personal assistance today. What are you looking for sir?"
+    - text: "Hello! I am Lira, your personal assistance today. What are you looking for sir?"
+    - text: "Hi! I am Lira, your personal assistance today. What are you looking for?"
+    - text: "Hey! I am Lira, your personal assistance today. What are you looking for?"
+
+  utter_ask_product:
+    - text: "Please tell me the product name."
+
+  utter_ask_order:
+    - text: "Do you want to place an order for this product?"  
+
+  utter_inform_api:
+    - text: "I am checking the product {product} for you. Please wait a seconds."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am Meena, your virtual assistant."
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
