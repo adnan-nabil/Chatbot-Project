@@ -82,10 +82,37 @@ nlu:
     - ami [Nokia Lumia](product) kinbo 
 
 
+- intent: check_price
+  examples: |
+    - how much is the price of [Xiaomi powerbank](product)?
+    - what is the cost of [Samsung charger](product)?
+    - tell me the price of [Anker earphone](product)
+    - [qcy melobuds pro 5](product) er dam koto?
+    - price of [Realme phone](product)?
+    - ami jante chai [Oppo mobile](product) er dam
+    - how much does [Apple iPhone](product) cost?
+    - what is the price of [OnePlus Nord](product)?
+    - tell me the cost of [Sony headphones](product)
+    - [JBL speaker](product) er dam koto?
+    - price of [Motorola Moto G](product)?
+    - dam koto?
+    - cost koto porbe?
+
+
 - intent: interested_in_order
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - who are you?
+    - place order
+    - order korbo kivabe
+    - I want to order the product
+    - ami product ta order dite chai
+    - how can I order
+    - order dite chai
+    - ami order korte chai
+    - order korar system ki?
+    - order process ta ki?
+    - order dibo kivabe
+    - order dibo
+    - ami order dite chai
+    - order korte help koren
+    - order korte chai
+   

@@ -17,7 +17,13 @@ rules:
   - intent: check_product
   - action: action_check_product
 
+- rule: Ask about price
+  steps:
+  - intent: check_price
+  - action: action_check_price
+
 - rule: push client to place order
   steps:
   - intent: affirmation
   - action: utter_ask_order  
+

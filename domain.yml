@@ -1,5 +1,6 @@
 version: "3.1"
 
+#specific info extracted from convo
 entities:
   - product
 
@@ -45,9 +46,6 @@ responses:
   utter_inform_api:
     - text: "I am checking the product {product} for you. Please wait a seconds."
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-
   utter_did_that_help:
   - text: "Did that help you?"
 
@@ -58,7 +56,9 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am Meena, your virtual assistant."
+  - text: "I am Susane, your virtual assistant."
+
+
 
 
 
