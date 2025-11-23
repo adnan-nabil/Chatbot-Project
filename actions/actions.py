@@ -43,4 +43,13 @@ class ActionPlaceOrder(Action):
         dispatcher.utter_message(text=f"Your order for '{product}' has been placed successfully!")
         return []    
 
+#price check
+class ActionCheckProduct(Action):
+    def name(self):
+        return "action_check_price"
 
+    def run(self, dispatcher, tracker, domain):
+        product = tracker.get_slot("product")
+        # Simulate API Hit (replace with real API call)
+        dispatcher.utter_message(text=f"I am checking the price for you...")
+        return []

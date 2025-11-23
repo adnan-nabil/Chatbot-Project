@@ -17,7 +17,6 @@ actions:
   - action_check_price
   - action_place_order
   - action_fetch_offers
-  - action_order_product
   # add additional custom actions as your business needs grow
 
 
@@ -58,7 +57,8 @@ responses:
   utter_iamabot:
   - text: "I am Susane, your virtual assistant."
 
-
+  utter_maniplate_other:
+    - text: "do you want something budget friendly?"
 
 
 

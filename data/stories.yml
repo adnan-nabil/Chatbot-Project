@@ -2,7 +2,7 @@ version: "3.1"
 
 stories:
 
-- story: greeting and product inquiry
+- story: type-1
   steps:
   - intent: greet
   - action: utter_greet
@@ -12,29 +12,39 @@ stories:
   - action: action_check_product
 
 
-- story: happy path
+- story: type-2
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: check_product
+    entities:
+      - product: "Xiaomi powerbank"
+  - action: action_check_product
+  - intent: affirmation
+  - action: utter_ask_order
+  - intent: affirmation
+  - action: action_place_order
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
 
-- story: sad path 2
+- story: type-3
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: check_price
+    entities:
+      - product: "Apple iPhone"
+  - action: action_check_price
+  - intent: affirmation
+  - action: utter_ask_order
+  - intent: affirmation
+  - action: action_place_order
+
+
+- story: type-4
+  steps:
+  - intent: check_price
+    entities:
+      - product: "Samsung charger"
+  - action: action_check_price
   - intent: deny
-  - action: utter_goodbye
+  - action: utter_maniplate_other
