@@ -9,6 +9,7 @@ stories:
   - intent: check_product
     entities:
       - product: "qcy melobuds pro 5"
+  - action: utter_inform_api    
   - action: action_check_product
 
 
@@ -19,10 +20,12 @@ stories:
   - intent: check_product
     entities:
       - product: "Xiaomi powerbank"
+  - action: utter_inform_api    
   - action: action_check_product
   - intent: affirmation
   - action: utter_ask_order
   - intent: affirmation
+  - action: utter_inform_api
   - action: action_place_order
 
 
@@ -33,6 +36,7 @@ stories:
   - intent: check_price
     entities:
       - product: "Apple iPhone"
+  - action: utter_inform_api    
   - action: action_check_price
   - intent: affirmation
   - action: utter_ask_order
@@ -48,3 +52,36 @@ stories:
   - action: action_check_price
   - intent: deny
   - action: utter_maniplate_other
+  - intent: affirmation
+  - action: utter_ask_product
+  - intent: check_product
+    entities:
+      - product: "Anker earphone"
+  - action: utter_inform_api    
+  - action: action_check_product
+  - intent: affirmation
+  - action: utter_ask_order
+  - intent: affirmation
+  - action: action_place_order
+
+
+- story: type-5
+  steps:
+  - intent: check_price
+    entities:
+      - product: "Samsung charger"
+  - action: action_check_price
+  - intent: deny
+  - action: utter_maniplate_other
+  - intent: deny
+  - action: utter_maniplate_other
+  - intent: affirmation
+  - action: utter_ask_product
+  - intent: check_product
+    entities:
+      - product: "Anker earphone"
+  - action: action_check_product
+  - intent: deny
+  - action: utter_maniplate_other
+  - intent: deny
+  - action: utter_maniplate_other 

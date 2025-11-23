@@ -27,3 +27,8 @@ rules:
   - intent: affirmation
   - action: utter_ask_order  
 
+- rule: Salam
+  steps:
+  - intent: salam
+  - action: utter_salam_reply
+

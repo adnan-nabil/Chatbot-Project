@@ -31,31 +31,28 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Walaikumussalam! I am Lira, your personal assistance today. What are you looking for sir?"
-    - text: "Hello! I am Lira, your personal assistance today. What are you looking for sir?"
-    - text: "Hi! I am Lira, your personal assistance today. What are you looking for?"
-    - text: "Hey! I am Lira, your personal assistance today. What are you looking for?"
+    - text: "Hello! I am Jesmin, your personal assistance today. What are you looking for sir?"
 
   utter_ask_product:
     - text: "Please tell me the product name."
+
+  utter_salam_reply:
+    - text: "Walai-kumussalam! I am jesmin, your assistant. How can I help you today?"  
 
   utter_ask_order:
     - text: "Do you want to place an order for this product?"  
 
   utter_inform_api:
-    - text: "I am checking the product {product} for you. Please wait a seconds."
+    - text: "I am checking. Please wait a seconds."
 
   utter_did_that_help:
   - text: "Did that help you?"
 
-  utter_happy:
-  - text: "Great, carry on!"
-
   utter_goodbye:
-  - text: "Bye"
+  - text: "Thank you Sir. Have a great day!"
 
   utter_iamabot:
-  - text: "I am Susane, your virtual assistant."
+  - text: "I am Jesmin, your virtual assistant."
 
   utter_maniplate_other:
     - text: "do you want something budget friendly?"

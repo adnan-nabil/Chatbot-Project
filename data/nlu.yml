@@ -56,6 +56,14 @@ nlu:
     - no way
     - not really
 
+- intent: Salam
+  examples: |
+    - assalamualaikum
+    - asalmualaikum
+    - salamualaikum
+    - salam
+    - asalamalaikum  
+
 
 - intent: bot_challenge
   examples: |
