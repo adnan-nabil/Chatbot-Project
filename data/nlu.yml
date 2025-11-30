@@ -9,8 +9,6 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - assalamualaikum
-    - adab
     - good afternoon
 
 - intent: goodbye
@@ -56,7 +54,7 @@ nlu:
     - no way
     - not really
 
-- intent: Salam
+- intent: salam
   examples: |
     - assalamualaikum
     - asalmualaikum
@@ -88,6 +86,11 @@ nlu:
     - [JBL speaker](product) ase?
     - have [Motorola Moto G](product)?
     - ami [Nokia Lumia](product) kinbo 
+    - [xiomi redmi note 11](product)
+    - [samsung galaxy s21](product)
+    - [iphone 13](product)
+    - [oneplus 9](product)
+    - [realme narzo 50](product)
 
 
 - intent: check_price

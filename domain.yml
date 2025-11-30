@@ -11,6 +11,11 @@ intents:
   - deny
   - check_product
   - bot_challenge
+  - salam
+  - check_price
+  - interested_in_order
+
+
 
 actions:
   - action_check_product
@@ -31,13 +36,13 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Hello! I am Jesmin, your personal assistance today. What are you looking for sir?"
+    - text: "Hello! I am your personal assistance today. What are you looking for sir?"
 
   utter_ask_product:
-    - text: "Please tell me the product name."
+    - text: "Please tell me the product name you want to order."
 
   utter_salam_reply:
-    - text: "Walai-kumussalam! I am jesmin, your assistant. How can I help you today?"  
+    - text: "Walai-kumussalam! I am your assistant. How can I help you today?"  
 
   utter_ask_order:
     - text: "Do you want to place an order for this product?"  
@@ -52,7 +57,7 @@ responses:
   - text: "Thank you Sir. Have a great day!"
 
   utter_iamabot:
-  - text: "I am Jesmin, your virtual assistant."
+  - text: "I am your virtual assistant."
 
   utter_maniplate_other:
     - text: "do you want something budget friendly?"

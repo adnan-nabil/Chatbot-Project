@@ -28,7 +28,7 @@ class ActionCheckProduct(Action):
     def run(self, dispatcher, tracker, domain):
         product = tracker.get_slot("product")
         # Simulate API Hit (replace with real API call)
-        dispatcher.utter_message(text=f"I am checking the product '{product}' for you...")
+        dispatcher.utter_message(text=f"Check product API calling.......")
         return []
     
 
@@ -40,16 +40,16 @@ class ActionPlaceOrder(Action):
     def run(self, dispatcher, tracker, domain):
         product = tracker.get_slot("product")
         # Simulate Order Placement (replace with real order logic)
-        dispatcher.utter_message(text=f"Your order for '{product}' has been placed successfully!")
+        dispatcher.utter_message(text=f"Place order API calling.......")
         return []    
 
 #price check
-class ActionCheckProduct(Action):
+class ActionCheckPrice(Action):
     def name(self):
         return "action_check_price"
 
     def run(self, dispatcher, tracker, domain):
         product = tracker.get_slot("product")
         # Simulate API Hit (replace with real API call)
-        dispatcher.utter_message(text=f"I am checking the price for you...")
+        dispatcher.utter_message(text=f"Check price API calling.......")
         return []

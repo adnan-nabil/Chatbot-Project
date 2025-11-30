@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Rasa Chat</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #chat { border: 1px solid #ccc; padding: 10px; width: 400px; height: 400px; overflow-y: auto; }
+    .msg { margin: 5px 0; }
+    .user { color: blue; }
+    .bot  { color: green; }
+  </style>
+</head>
+<body>
+  <h2>Rasa Chat (REST)</h2>
+  <div id="chat"></div>
+  <input id="message" type="text" placeholder="Type a message" style="width: 320px;" />
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    const chatDiv = document.getElementById('chat');
+    const senderId = 'test_user_1'; // any id
+
+    function addMessage(text, who) {
+      const div = document.createElement('div');
+      div.className = 'msg ' + who;
+      div.textContent = (who === 'user' ? 'You: ' : 'Bot: ') + text;
+      chatDiv.appendChild(div);
+      chatDiv.scrollTop = chatDiv.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById('message');
+      const text = input.value.trim();
+      if (!text) return;
+      addMessage(text, 'user');
+      input.value = '';
+
+      try {
+        const response = await fetch('http://localhost:5005/webhooks/rest/webhook', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sender: senderId, message: text })
+        });
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          data.forEach(m => {
+            if (m.text) addMessage(m.text, 'bot');
+          });
+        }
+      } catch (err) {
+        addMessage('Error talking to Rasa: ' + err.message, 'bot');
+      }
+    }
+
+    // allow Enter key to send
+    document.getElementById('message').addEventListener('keyup', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+</body>
+</html>

@@ -2,33 +2,43 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: greetings
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: greet
+  - action: utter_greet
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
-- rule: Ask about any product
-  steps:
-  - intent: check_product
-  - action: action_check_product
-
-- rule: Ask about price
-  steps:
-  - intent: check_price
-  - action: action_check_price
-
-- rule: push client to place order
-  steps:
-  - intent: affirmation
-  - action: utter_ask_order  
 
 - rule: Salam
   steps:
   - intent: salam
   - action: utter_salam_reply
+
+
+- rule: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- rule: bot_challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: check_product
+  steps:
+  - intent: check_product
+  - action: utter_inform_api
+  - action: action_check_product
+
+
+- rule: check_price
+  steps:
+  - intent: check_price
+  - action: utter_inform_api
+  - action: action_check_price
+
+ 
+
 

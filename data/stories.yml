@@ -22,9 +22,12 @@ stories:
       - product: "Xiaomi powerbank"
   - action: utter_inform_api    
   - action: action_check_product
-  - intent: affirmation
-  - action: utter_ask_order
-  - intent: affirmation
+  - intent: check_price
+    entities:
+      - product: "Xiaomi powerbank"
+  - action: utter_inform_api    
+  - action: action_check_price
+  - intent: interested_in_order
   - action: utter_inform_api
   - action: action_place_order
 
@@ -39,8 +42,9 @@ stories:
   - action: utter_inform_api    
   - action: action_check_price
   - intent: affirmation
+  - action: utter_inform_api
   - action: utter_ask_order
-  - intent: affirmation
+  - intent: interested_in_order
   - action: action_place_order
 
 
@@ -49,6 +53,7 @@ stories:
   - intent: check_price
     entities:
       - product: "Samsung charger"
+  - action: utter_inform_api    
   - action: action_check_price
   - intent: deny
   - action: utter_maniplate_other
@@ -70,9 +75,8 @@ stories:
   - intent: check_price
     entities:
       - product: "Samsung charger"
+  - action: utter_inform_api    
   - action: action_check_price
-  - intent: deny
-  - action: utter_maniplate_other
   - intent: deny
   - action: utter_maniplate_other
   - intent: affirmation
@@ -80,8 +84,7 @@ stories:
   - intent: check_product
     entities:
       - product: "Anker earphone"
+  - action: utter_inform_api
   - action: action_check_product
   - intent: deny
-  - action: utter_maniplate_other
-  - intent: deny
-  - action: utter_maniplate_other 
+

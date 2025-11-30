@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rasa Webchat</title>
+</head>
+<body>
+  <div id="webchat"></div>
+  <script src="index.js"></script>
+  <script>
+    WebChat.default({
+      selector: "#webchat",
+      initPayload: "/greet",
+      socketUrl: "http://localhost:5005",
+      title: "Test Rasa Bot"
+    });
+  </script>
+</body>
+</html>
